@@ -1,0 +1,12 @@
+{
+  "characters": [
+    {
+      "id": 108,
+      "name": "Dr Xenon Bloom",
+      "status": "Dead",
+      "species": "Humanoid",
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/108.jpeg"
+    }
+  ]
+}
