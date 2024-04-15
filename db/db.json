@@ -1,0 +1,54 @@
+{
+    "characters": [
+      {
+        "id": 108,
+        "name": "Dr. Xenon Bloom",
+        "status": "Dead",
+        "species": "Humanoid",
+        "gender": "Male",
+        "image": "https://rickandmortyapi.com/api/character/avatar/108.jpeg"
+      },
+      {
+        "id": 2,
+        "name": "Morty Smith",
+        "status": "Alive",
+        "species": "Human",
+        "gender": "Male",
+        "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg"
+      },
+      {
+        "id": 3,
+        "name": "Summer Smith",
+        "status": "Alive",
+        "species": "Human",
+        "gender": "Female",
+        "image": "https://rickandmortyapi.com/api/character/avatar/3.jpeg"
+      },
+      {
+        "id": 4,
+        "name": "Beth Smith",
+        "status": "Alive",
+        "species": "Human",
+        "gender": "Female",
+        "image": "https://rickandmortyapi.com/api/character/avatar/4.jpeg"
+      },
+      {
+        "id": 5,
+        "name": "Jerry Smith",
+        "status": "Alive",
+        "species": "Human",
+        "gender": "Male",
+        "image": "https://rickandmortyapi.com/api/character/avatar/5.jpeg"
+      },
+      {
+        "id": 6,
+        "name": "Birdperson",
+        "status": "Alive",
+        "species": "Alien (Birdperson)",
+        "gender": "Male",
+        "image": "https://rickandmortyapi.com/api/character/avatar/6.jpeg"
+      }
+    ]
+  }
+  
+  

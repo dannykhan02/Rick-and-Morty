@@ -1,17 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const baseUrl = 'http://localhost:3000/characters';
+
     // Fetch character data from the provided API endpoint
-    fetch('https://rickandmortyapi.com/api/character/108')
+    fetch(baseUrl)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Failed to fetch character data');
             }
             return response.json();
         })
-        .then(character => {
-            // Display the character data
-            displayCharacter(character);
+        .then(characters => {
+            // Display the characters data
+            characters.forEach(character => {
+                displayCharacter(character);
+            });
 
-            // Add event listeners after displaying the character
+            // Add event listeners after displaying the characters
             addEventListeners();
         })
         .catch(error => {
@@ -22,8 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function displayCharacter(character) {
         // Find the container element where the character will be displayed
         const container = document.querySelector('.container');
-        // Clear the container
-        container.innerHTML = '';
 
         // Create a card element to display the character information
         const card = document.createElement('div');
@@ -56,20 +58,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to add event listeners
     function addEventListeners() {
-        // Add mouseover event listener to the card
-        const card = document.querySelector('.card');
-        card.addEventListener('mouseover', function(event) {
-            event.currentTarget.style.opacity = '0.8'; // Change opacity on mouseover
-        });
+        // Add mouseover event listener to the cards
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            card.addEventListener('mouseover', function(event) {
+                event.currentTarget.style.opacity = '0.8'; // Change opacity on mouseover
+            });
 
-        // Add mouseout event listener to the card
-        card.addEventListener('mouseout', function(event) {
-            event.currentTarget.style.opacity = '1'; // Reset opacity on mouseout
-        });
+            // Add mouseout event listener to the cards
+            card.addEventListener('mouseout', function(event) {
+                event.currentTarget.style.opacity = '1'; // Reset opacity on mouseout
+            });
 
-        // Add click event listener to the card
-        card.addEventListener('click', function(event) {
-            alert(`You clicked on ${event.currentTarget.querySelector('p').textContent.split(': ')[1]}`); // Alert with character name on click
+            // Add click event listener to the cards
+            card.addEventListener('click', function(event) {
+                alert(`You clicked on ${event.currentTarget.querySelector('p').textContent.split(': ')[1]}`); // Alert with character name on click
+            });
         });
     }
 });
